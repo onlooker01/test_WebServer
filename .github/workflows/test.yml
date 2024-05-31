@@ -1,0 +1,16 @@
+name: server测试
+
+on: push
+
+jobs:
+  Run_instance:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 读取仓库内容
+      uses: actions/checkout@v4
+    - name: build
+      run: sh ./build.sh
+    - name: 启动server
+      run: ./server
+    - name: 浏览器端
+      run: ip:9006
