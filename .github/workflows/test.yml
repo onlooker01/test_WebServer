@@ -10,6 +10,8 @@ jobs:
       uses: actions/checkout@v4
     - name: build
       run: sh ./build.sh
+    - name: 数据库
+      run: MySQL --version
     - name: 启动server
       run: ./server
     - name: 浏览器端
