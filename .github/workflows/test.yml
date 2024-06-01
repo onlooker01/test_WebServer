@@ -27,12 +27,16 @@ jobs:
     - name: build
       run: sh ./build.sh
 
+    - name: 55
+      uses: mv server built/
+      
     - name: 部署
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        floder: server
+        floder: built
 
+    
     # - name: 启动server
     #   run: ./server
     # - name: 浏览器端
