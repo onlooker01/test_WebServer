@@ -26,11 +26,11 @@ jobs:
     - name: build
       run: sh ./build.sh
 
-    - name: 部署
-      use: JamesIves/github-deploy-action@v4
-      with:
-        branch: test
-        floder: server
+    # - name: 部署
+    #   use: JamesIves/github-deploy-action@v4
+    #   with:
+    #     branch: test
+    #     floder: server
 
     # - name: 启动server
     #   run: ./server
