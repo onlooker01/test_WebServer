@@ -21,6 +21,8 @@ jobs:
           local_infile=1
 
     - name: ...
+      run: mysql --version
+    - name: ...
       run: show detabases
 
     # - name: build
