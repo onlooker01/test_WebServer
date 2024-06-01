@@ -12,7 +12,7 @@ jobs:
     - name: 数据库
       uses: shogo82148/actions-setup-mysql@v1
       with:
-        mysql-version: "8.0"
+        mysql-version: "5.7"
         auto-start: true
         root-password: "root"
 
