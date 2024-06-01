@@ -21,7 +21,7 @@ jobs:
           local_infile=1
 
     - name: ...
-      run: mysql -u root -p root < create_user_db.sql
+      run: mysql -u root -p root 
 
     - name: build
       run: sh ./build.sh
