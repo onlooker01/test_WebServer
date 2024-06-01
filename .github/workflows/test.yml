@@ -23,7 +23,7 @@ jobs:
     - name: ...
       run: mysql --version
     - name: ...
-      run: show detabases
+      run: mysql -e "show databases;"
 
     # - name: build
     #   run: sh ./build.sh
