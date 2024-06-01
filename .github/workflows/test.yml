@@ -10,11 +10,11 @@ jobs:
       uses: actions/checkout@v4
 
     - name: 数据库
-    - uses: shogo82148/actions-setup-mysql@v1
-      # with:
-      #   mysql-version: "8.0"
+      uses: shogo82148/actions-setup-mysql@v1
+      with:
+        mysql-version: "8.0"
     - name: ...
-    - run: mysql -uroot -e 'SELECT version()'
+      run: mysql -uroot -e 'SELECT version()'
 
 
     - name: build
