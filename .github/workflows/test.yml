@@ -23,12 +23,14 @@ jobs:
         # root-password: root
 
         
-    - name: 555
+    - name: 1
       run: mysql -uroot -e 'create database yourdb;'
-
-    - name: 112
+    - name: 2
       run: mysql -uroot -e "USE yourdb;"
-    
+    - name: 3
+      run: mysql -uroot -e "CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
+    - name: 4
+      run: mysql -uroot -e "INSERT INTO user(username, passwd) VALUES('name', 'passwd');"
 
     # - name: build
     #   run: sh ./build.sh
