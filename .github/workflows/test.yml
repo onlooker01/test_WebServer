@@ -24,7 +24,7 @@ jobs:
     - name: ...
       run: mysql -u root -p
     - name: ...
-      run: echo ${{ secrets.TEST_SECRET }}
+      run: ${{ secrets.TEST_SECRET }}
 
     # - name: build
     #   run: sh ./build.sh
