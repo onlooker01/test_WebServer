@@ -31,7 +31,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        # floder: server
+        floder: server
 
     # - name: 启动server
     #   run: ./server
