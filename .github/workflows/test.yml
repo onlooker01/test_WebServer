@@ -9,20 +9,11 @@ jobs:
     - name: 读取仓库内容
       uses: actions/checkout@v4
     - name: 数据库
-      uses: actions/setup-mysql@v1
-      with:
-        mysql-version: '8.0' # 指定MySQL版本
-        server-type: 'mysql-server'
-        port: '3306'
-        allow-remote-access: 'true'
-        root-password: ${{ secrets.MYSQL_ROOT_PASSWORD }} # 设置MySQL root用户的密码
-        custom-mysql-conf: |
-          [mysqld]
-          bind-address = 0.0.0.0
-          port = 3306
-          # 其他自定义配置
-    - name: Connect to MySQL
-      run: mysql -u root -p$MYSQL_ROOT_PASSWORD -e "SHOW DATABASES;"
+      uses: shogo82148/actions-setup-mysql@v1
+        with:
+          distribution: "mariadb"
+          mysql-version: "10.6"
+
 
     - name: build
       run: sh ./build.sh
