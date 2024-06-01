@@ -13,29 +13,19 @@ jobs:
       uses: shogo82148/actions-setup-mysql@v1
       with:
         mysql-version: "8.0"
-        # my-cnf: |
-        #   innodb_log_file_size=256MB
-        #   innodb_buffer_pool_size=512MB
-        #   max_allowed_packet=16MB
-        #   max_connections=50
-        #   local_infile=1
         auto-start: true
-        # root-password: root
 
-        
     - name: 1
       run: mysql -uroot -e 'create database yourdb;'
-    # - name: 2
-    #   run: mysql -uroot -e "USE yourdb;"
-    - name: 3
+    - name: 2
       run: mysql -uroot -e "USE yourdb;CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
-    - name: 4
+    - name: 3
       run: mysql -uroot -e "USE yourdb;INSERT INTO user(username, passwd) VALUES('name', 'passwd');"
 
-    # - name: build
-    #   run: sh ./build.sh
+    - name: build
+      run: sh ./build.sh
 
-    # - name: 启动server
-    #   run: ./server
-    # - name: 浏览器端
-    #   run: curl http://ip:9006
+    - name: 启动server
+      run: ./server
+    - name: 浏览器端
+      run: curl http://ip:9006
