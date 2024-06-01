@@ -12,7 +12,7 @@ jobs:
       run: sh ./build.sh
     - name: 数据库
       run: apt install MySQL
-      run: MySQL --version
+    - run: MySQL --version
     - name: 启动server
       run: ./server
     - name: 浏览器端
