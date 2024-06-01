@@ -29,7 +29,7 @@ jobs:
       run: sh ./build.sh
 
     - name: 部署
-      uses: JamesIves/github-deploy-action@v4
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: test
         floder: server
