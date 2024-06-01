@@ -22,4 +22,4 @@ jobs:
     # - name: 启动server
     #   run: ./server
     - name: 浏览器端
-      run: ip:9006
+      run: curl http://ip:9006
