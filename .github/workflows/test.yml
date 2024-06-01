@@ -24,10 +24,14 @@ jobs:
 
         
     - name: 555
-      run: mysql -uroot -e 'SELECT version()'
+      run: mysql -uroot -e 'create database yourdb;'
 
     - name: 112
-      run: mysql -uroot -e "show databases;"
+      run: mysql -uroot -e "USE yourdb;
+CREATE TABLE user(
+    username char(50) NULL,
+    passwd char(50) NULL
+)ENGINE=InnoDB;"
     
 
     # - name: build
