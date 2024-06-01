@@ -28,7 +28,7 @@ jobs:
       run: mysql -uroot -e 'SELECT version()'
 
     - name: 111
-      run: mysql -e "show databases;"
+      run: mysql -u 11 -p 11 -e "show databases;"
     - name: ...
       run: mysql -u ll -pll
     - name: 111
