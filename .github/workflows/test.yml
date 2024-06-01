@@ -9,22 +9,22 @@ jobs:
     - name: 读取仓库内容
       uses: actions/checkout@v4
 
-    # - name: 数据库
-    #   uses: mirromutth/mysql-action@v1.1
-    #   with:
-    #     host port: 9006
-    #     container port: 9006
-    #     character set server: 'utf8' 
-    #     mysql version: '8.0'
-    #     mysql database: 'yourdb' 
-    #     mysql root password: root 
-    #     mysql user: root
-    #     mysql password: root
+    - name: 数据库
+      uses: mirromutth/mysql-action@v1.1
+      with:
+        host port: 9006
+        container port: 9006
+        character set server: 'utf8' 
+        mysql version: '8.0'
+        mysql database: 'yourdb' 
+        mysql root password: root 
+        mysql user: root
+        mysql password: root
 
 
-    - name: build
-      run: sh ./build.sh
-    - name: 启动server
-      run: ./server -p 9007 -l 1 -m 0 -o 1 -s 10 -t 10 -c 1 -a 1
-    - name: 浏览器端
-      run: ip:9006
+    # - name: build
+    #   run: sh ./build.sh
+    # - name: 启动server
+    #   run: ./server
+    # - name: 浏览器端
+    #   run: ip:9006
