@@ -17,7 +17,7 @@ jobs:
         root-password: "root"
 
     - name: 1
-      run: mysql -uroot -e 'create database yourdb;'
+      run: mysql -uroot -proot -e 'create database yourdb;'
     - name: 2
       run: mysql -uroot -e "USE yourdb;CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
     - name: 3
