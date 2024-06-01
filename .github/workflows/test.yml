@@ -20,7 +20,7 @@ jobs:
         #   max_connections=50
         #   local_infile=1
         auto-start: true
-        root-password: root
+        # root-password: root
 
         
     - name: 555
