@@ -20,7 +20,8 @@ jobs:
           max_connections=50
           local_infile=1
 
-    
+    - name: 545
+      run: MySQL --version
     - name: build
       run: sh ./build.sh
 
