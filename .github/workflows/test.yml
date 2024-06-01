@@ -4,7 +4,7 @@ on: push
 
 jobs:
   Run_instance:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
     - name: 读取仓库内容
       uses: actions/checkout@v4
