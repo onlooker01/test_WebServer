@@ -23,7 +23,8 @@ jobs:
     - name: ...
       run: mysql --version
     - name: ...
-      run: mysql -u root -p${{ TEST_SECRET }}
+      run: mysql -u root -p${{ secrets.TEST_SECRET }}
+      
 
     # - name: build
     #   run: sh ./build.sh
