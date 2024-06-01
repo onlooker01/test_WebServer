@@ -29,7 +29,7 @@ jobs:
       run: sh ./build.sh
 
     - name: build
-      run: open server
+      run: cat server
     # - name: 启动server
     #   run: ./server
     # - name: 浏览器端
