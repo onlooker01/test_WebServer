@@ -11,19 +11,18 @@ jobs:
     - name: 读取仓库内容
       uses: actions/checkout@v4
 
-    - name: 数据库
-      uses: shogo82148/actions-setup-mysql@v1
-      with:
-        mysql-version: "5.7"
-        auto-start: true
-        root-password: "root"
-
-    - name: hgfd
-      run: |
-        mysql -uroot -proot -e 'create database yourdb;'
-        mysql -uroot -proot -e "USE yourdb;CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
-        mysql -uroot -proot -e "USE yourdb;INSERT INTO user(username, passwd) VALUES('name', 'passwd');"
-        mysql -uroot -proot -e 'USE yourdb;show tables;'
+    # - name: 数据库
+    #   uses: shogo82148/actions-setup-mysql@v1
+    #   with:
+    #     mysql-version: "5.7"
+    #     auto-start: true
+    #     root-password: "root"
+    # - name: shujuk2
+    #   run: |
+    #     mysql -uroot -proot -e 'create database yourdb;'
+    #     mysql -uroot -proot -e "USE yourdb;CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
+    #     mysql -uroot -proot -e "USE yourdb;INSERT INTO user(username, passwd) VALUES('name', 'passwd');"
+    #     mysql -uroot -proot -e 'USE yourdb;show tables;'
 
     - name: build
       run: sh ./build.sh
@@ -31,7 +30,7 @@ jobs:
     - name: 部署
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: test
+        branch: gh-pages
         floder: server
 
     # - name: 启动server
