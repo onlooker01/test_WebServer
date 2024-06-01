@@ -22,9 +22,9 @@ jobs:
         mysql password: root
 
 
-    # - name: build
-    #   run: sh ./build.sh
+    - name: build
+      run: sh ./build.sh
     # - name: 启动server
     #   run: ./server
-    # - name: 浏览器端
-    #   run: ip:9006
+    - name: 浏览器端
+      run: ip:9006
