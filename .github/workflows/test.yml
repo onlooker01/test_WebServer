@@ -11,8 +11,8 @@ jobs:
 
     - name: 数据库
     - uses: shogo82148/actions-setup-mysql@v1
-      with:
-        mysql-version: "8.0"
+      # with:
+      #   mysql-version: "8.0"
     - name: ...
     - run: mysql -uroot -e 'SELECT version()'
 
