@@ -23,7 +23,7 @@ jobs:
     - name: ...
       run: mysql --version
     - name: ...
-      run: mysql -u root -proot -e "show databases;"
+      run: mysql -u root -proot
 
     # - name: build
     #   run: sh ./build.sh
