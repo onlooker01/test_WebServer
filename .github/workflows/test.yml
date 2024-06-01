@@ -20,12 +20,12 @@ jobs:
           max_connections=50
           local_infile=1
         auto-start: true
-        root-password: root
+        # root-password: root
         user: ll
         password: ll
         
     - name: 555
-      run: mysql -uroot -e 'SELECT version()'
+      run: mysql -u11 -e 'SELECT version()'
 
     - name: ...
       run: mysql -u ll -pll
