@@ -20,11 +20,11 @@ jobs:
           max_connections=50
           local_infile=1
 
+
     - name: ...
-      run: mysql --version
-    - name: ...
-      run: mysql -u root -p${{ secrets.TEST_SECRET }}
-      
+      run: mysql -u root -p
+      - name: ...
+      run: echo ${{ secrets.TEST_SECRET }}
 
     # - name: build
     #   run: sh ./build.sh
