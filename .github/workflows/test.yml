@@ -22,7 +22,7 @@ jobs:
 
 
     - name: ...
-      run: mysql -u root -p${{ secrets.TEST_SECRET }}
+      run: mysql -u root -pYES
     - name: 111
       run: mysql -e "show databases;"
 
