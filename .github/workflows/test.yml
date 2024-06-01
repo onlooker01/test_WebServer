@@ -21,12 +21,12 @@ jobs:
           local_infile=1
 
     - name: ...
-      run: mysql -u root -p root 
+      run: show detabases
 
-    - name: build
-      run: sh ./build.sh
+    # - name: build
+    #   run: sh ./build.sh
 
-    - name: 启动server
-      run: ./server
-    - name: 浏览器端
-      run: curl http://ip:9006
+    # - name: 启动server
+    #   run: ./server
+    # - name: 浏览器端
+    #   run: curl http://ip:9006
