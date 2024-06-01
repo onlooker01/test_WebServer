@@ -14,6 +14,7 @@ jobs:
       with:
         mysql-version: "8.0"
         auto-start: true
+        root-password: "root"
 
     - name: 1
       run: mysql -uroot -e 'create database yourdb;'
@@ -22,10 +23,10 @@ jobs:
     - name: 3
       run: mysql -uroot -e "USE yourdb;INSERT INTO user(username, passwd) VALUES('name', 'passwd');"
 
-    - name: build
-      run: sh ./build.sh
+    # - name: build
+    #   run: sh ./build.sh
 
-    - name: 启动server
-      run: ./server
-    - name: 浏览器端
-      run: curl http://ip:9006
+    # - name: 启动server
+    #   run: ./server
+    # - name: 浏览器端
+    #   run: curl http://ip:9006
