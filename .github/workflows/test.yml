@@ -25,10 +25,10 @@ jobs:
         
     - name: 1
       run: mysql -uroot -e 'create database yourdb;'
-    - name: 2
-      run: mysql -uroot -e "USE yourdb;"
+    # - name: 2
+    #   run: mysql -uroot -e "USE yourdb;"
     - name: 3
-      run: mysql -uroot -e "CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
+      run: mysql -uroot -e "USE yourdb;CREATE TABLE user(username char(50) NULL,passwd char(50) NULL)ENGINE=InnoDB;"
     - name: 4
       run: mysql -uroot -e "INSERT INTO user(username, passwd) VALUES('name', 'passwd');"
 
