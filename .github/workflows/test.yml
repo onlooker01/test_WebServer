@@ -20,8 +20,9 @@ jobs:
           max_connections=50
           local_infile=1
 
-    - name: 545
-      run: mysql --version
+    - name: ...
+      run: mysql -u root -p root < create_user_db.sql
+
     - name: build
       run: sh ./build.sh
 
