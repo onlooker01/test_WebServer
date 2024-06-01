@@ -9,7 +9,7 @@ jobs:
     - name: 读取仓库内容
       uses: actions/checkout@v4
     - name: 数据库
-      uses: installer/setup-mysql@v1
+      uses: actions/setup-mysql@v1
       with:
         mysql-version: '8.0' # 指定MySQL版本
         server-type: 'mysql-server'
