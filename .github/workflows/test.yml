@@ -19,20 +19,16 @@ jobs:
         #   max_allowed_packet=16MB
         #   max_connections=50
         #   local_infile=1
-        # auto-start: true
-        # # root-password: root
-        # user: ll
-        # password: ll
+        auto-start: true
+        root-password: root
+
         
     - name: 555
       run: mysql -uroot -e 'SELECT version()'
 
     - name: 112
       run: mysql -uroot -e "show databases;"
-    - name: ...
-      run: mysql -u ll -pll
-    - name: 111
-      run: mysql -e "show databases;"
+    
 
     # - name: build
     #   run: sh ./build.sh
