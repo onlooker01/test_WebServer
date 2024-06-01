@@ -19,11 +19,13 @@ jobs:
           max_allowed_packet=16MB
           max_connections=50
           local_infile=1
+          user=root
+          password=root
     - name: 555
       run: mysql -uroot -e 'SELECT version()'
 
     - name: ...
-      run: mysql -u root -pYES
+      run: mysql -u root -proot
     - name: 111
       run: mysql -e "show databases;"
 
