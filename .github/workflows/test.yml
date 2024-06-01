@@ -13,19 +13,19 @@ jobs:
       uses: shogo82148/actions-setup-mysql@v1
       with:
         mysql-version: "8.0"
-        my-cnf: |
-          innodb_log_file_size=256MB
-          innodb_buffer_pool_size=512MB
-          max_allowed_packet=16MB
-          max_connections=50
-          local_infile=1
-        auto-start: true
-        # root-password: root
-        user: ll
-        password: ll
+        # my-cnf: |
+        #   innodb_log_file_size=256MB
+        #   innodb_buffer_pool_size=512MB
+        #   max_allowed_packet=16MB
+        #   max_connections=50
+        #   local_infile=1
+        # auto-start: true
+        # # root-password: root
+        # user: ll
+        # password: ll
         
     - name: 555
-      run: mysql -u11 -e 'SELECT version()'
+      run: mysql -uroot -e 'SELECT version()'
 
     - name: ...
       run: mysql -u ll -pll
